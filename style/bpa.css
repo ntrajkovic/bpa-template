@@ -1,0 +1,117 @@
+/* General */
+
+html, body, h1, h2, h3, h4, h5, h6 {
+  font-family: "Open Sans", sans-serif; /* override w3.css fonts */
+}
+
+html, body {       /* fix font size */
+  font-size: 14px; /* latin chars under 14px look bad */
+}                  /* also bpa original default */
+
+html {
+  overflow-y: scroll; /* always show scrollbar */
+}
+
+/* Body */
+
+body {
+  background-color: #fff;
+  background-image: url(../images/bg-pattern-1.jpg);
+  background-position: top center;
+  background-repeat: repeat;
+}
+
+#sidebar-overlay {
+  cursor: pointer;
+}
+
+#decor {
+  background-image: url(../images/bg-pattern-3.jpg);
+  background-repeat: repeat-x;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 20px; /* match bg-pattern-3 image height */
+  z-index: -1; /* use with position attrib. only? */
+}
+
+/* Sidebar */
+
+#bpa-sidebar {
+  background-color: #fff;
+  background-image: url(../images/bg-pattern-2.jpg);
+  background-position: top center;
+  background-repeat: repeat;
+  overflow-x: hidden; /* dont scroll sidebar horizontally */
+  width: 320px; /* must match #content-area margin-left! */
+  z-index: 5;
+}
+
+#bpa-logo {
+  margin: 40px 16px; /* 40px up + 40px down + 80px image height = 160px */
+}
+
+#bpa-description {
+  padding: 16px;
+  margin-top: 0px;
+  line-height: 1.2em;
+}
+
+#bpa-navigation {
+  margin-top: 32px;
+}
+
+#bpa-navigation a {
+  line-height: 2.2em;
+}
+
+/* Content */
+
+#content-area {
+  margin-left: 320px; /* must match #bpa-sidebar width! */
+  padding-top: 52px; /* #decor + 32px */
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-bottom: 32px;
+}
+
+.spacer {        /* start #bpa-content in line with #bpa-logo bottom */
+  height: 108px; /* 160px (logo) = 108px + 52px (content-area p-top) */
+}                /* also gives blank space at the bottom of the page */
+
+#bpa-content {
+  background-color: #fff;
+}
+
+h1 {
+  margin-bottom: 64px;
+}
+
+h2 {
+  font-size: 1.3em;
+  font-weight: 700;
+  padding-top: 48px;
+  padding-bottom: 8px;
+  border-bottom: 4px solid #000;
+  margin-bottom: 32px;
+}
+
+h3 {
+  font-size: 1.15em;
+  font-weight: 700;
+  margin-bottom: 0px;
+}
+
+.subtitle {
+  margin-top: 0px;
+}
+
+article header {
+  cursor: pointer;
+}
+
+#btn-open {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+}
